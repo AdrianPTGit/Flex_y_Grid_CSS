@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: steelblue;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+
+}
+
+.item{
+    background-color: grey;
+    height:300px ;
+    width: 300px;
+    margin-left: 6px;
+    margin-top: 6px;
+}
