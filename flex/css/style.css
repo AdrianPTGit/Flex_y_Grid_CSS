@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    row-gap: 30px;
+    justify-content: end;
     background: steelblue;
     padding-bottom: 10px;
     padding-top: 10px;

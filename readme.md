@@ -90,3 +90,43 @@ Para activar el modo flex, utilizaremos sobre el elemento contenedor la propieda
   flex-flow: row wrap;
 }
 ```
+
+## 1.4. Huecos (Gaps)
+
+- `row-gap` y `column-gap`. Dichas propiedades, permiten establecer el tamaño de un **«hueco»** entre ítems desde el elemento padre contenedor, y que eliminan la necesidad de estar utilizando `padding` o `margin` en los elementos hijos, con las complicaciones que ello suele conllevar.
+  
+| Propiedad     | Valor     | Descripción                                                             |
+|---------------|-----------|--------------------------------------------------------------------------|
+| `row-gap`     | `normal`  | Espacio entre filas (solo funciona con `flex-direction: column`).       |
+| `column-gap`  | `normal`  | Espacio entre columnas (solo funciona con `flex-direction: row`).       |
+
+- flex es un sistema para diseños de una sola dimensión, sólo una de las dos propiedades tendrá efecto.
+
+# 2. Alineación de elementos
+- las siguientes propiedades, donde algunas actuan en el eje principal 1️⃣ (recordemos que por defecto es el horizontal), mientras que otras actuan en el eje secundario 2️⃣ (por defecto, el eje vertical):
+
+| Propiedad        | Valor                                                                 | Actúa en eje       |
+|------------------|-----------------------------------------------------------------------|--------------------|
+| `justify-content`| `start` \| `end` \| `center` \| `space-between` \| `space-around` \| `space-evenly` | Eje principal (1️⃣) |
+| `align-items`    | `start` \| `end` \| `center` \| `stretch` \| `baseline`               | Eje secundario (2️⃣) |
+| `align-content`  | `start` \| `end` \| `center` \| `space-between` \| `space-around` \| `space-evenly` \| `stretch` | Eje secundario (2️⃣, solo si hay múltiples líneas) |
+
+> La última propiedad, `align-content` solo tiene efecto si tenemos un contenedor **flex multilinea.**
+
+**Antes de comenzar con la alineación de elementos, un pequeño resumen:**
+- `justify-content`: Se utiliza para alinear los ítems del eje principal **(por defecto, el horizontal).**
+- `align-items`: Usada para alinear los ítems del eje secundario **(por defecto, el vertical).**
+- `align-content`: Se utiliza para alinear el contenido del eje secundario entre líneas **(sólo en contenedor multilinea).**
+
+## 2.1. La propiedad `justify-content`
+
+- colocar los ítems de un contenedor mediante una disposición concreta a lo largo del eje principal (por defecto, en horizontal).
+
+| Valor           | Descripción                                                                 |
+|-----------------|------------------------------------------------------------------------------|
+| `start`         | Agrupa los ítems al inicio del eje principal.                               |
+| `end`           | Agrupa los ítems al final del eje principal.                                |
+| `center`        | Agrupa los ítems al centro del eje principal.                               |
+| `space-between` | Distribuye los ítems dejando espacio entre ellos.                           |
+| `space-around`  | Distribuye los ítems dejando espacio alrededor de ellos.                    |
+| `space-evenly`  | Distribuye como `space-around`, pero con un espacio exactamente igual alrededor de ellos. |
