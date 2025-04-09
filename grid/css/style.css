@@ -1,0 +1,15 @@
+.grid{
+    display: inline-grid;
+    grid-template-columns: 150px 300px;
+    grid-template-rows: 150px 300px;
+    background: steelblue;
+    padding: 20px;
+    height:100%;
+}
+
+.item{
+    background-color: grey;
+    margin-left: 6px;
+    margin-top: 6px;
+    border: 2px solid black;
+}

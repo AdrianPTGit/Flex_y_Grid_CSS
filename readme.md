@@ -170,3 +170,47 @@ Para activar el modo flex, utilizaremos sobre el elemento contenedor la propieda
 | Propiedad   | Valores                                      | Actúa en eje |
 |-------------|----------------------------------------------|--------------|
 | `align-self`| `auto`  `start`  `end`  `center`  `stretch`  `baseline` | 2️⃣ (eje cruzado) |
+
+# 4. Grid CSS
+
+-  `grid` permite crear rápidamente cuadrículas flexibles y potentes de forma prácticamente instantánea con una nueva familia de propiedades CSS.
+
+## 4.1. Conceptos de Grid
+
+![Conceptos grid](img/conceptos_grid.png)
+
+- **Contenedor:** El elemento padre contenedor que definirá la cuadrícula o rejilla.
+- **Ítem:** Cada uno de los hijos que contiene la cuadrícula (elemento contenedor).
+- **Celda (grid cell):** Cada uno de los cuadritos (unidad mínima) de la cuadrícula.
+- **Area (grid area):** Región o conjunto de celdas de la cuadrícula.
+- **Banda (grid track):** Banda horizontal o vertical de celdas de la cuadrícula.
+- **Línea (grid line):** Separador horizontal o vertical de las celdas de la cuadrícula.
+
+- Para activar la cuadrícula grid hay que utilizar sobre el elemento contenedor la propiedad `display` y especificar uno de los dos valores que queramos utilizar: `grid` o `inline-grid`.
+
+| Tipo de elemento | Descripción                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| `inline-grid`    | Establece una cuadrícula con ítems en línea, de forma equivalente a `inline-block`. |
+| `grid`           | Establece una cuadrícula con ítems en bloque, de forma equivalente a `block`.       |
+
+## 4.2. Definir filas y columnas
+### Filas y columnas fijas
+
+- la forma principal de definir una cuadrícula es indicar el tamaño de sus filas y sus columnas de forma explícita. Para ello, con propiedades CSS `grid-template-columns` y `grid-template-rows`:
+
+| Propiedad              | Valor                 | Descripción                                              |
+|------------------------|-----------------------|----------------------------------------------------------|
+| `grid-template-columns`| `[col1] [col2] ...`   | Establece el tamaño y número de columnas de la cuadrícula. |
+| `grid-template-rows`   | `[fila1] [fila2] ...` | Establece el tamaño y número de filas de la cuadrícula.    |
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: 50px 300px;
+  grid-template-rows: 200px 75px;
+}
+```
+- Con la propiedad `display`: grid definimos que queremos crear un grid, y mediante las propiedades `grid-template-columns` y `grid-template-rows` definimos los tamaños de las columnas y las filas del mismo.
+  - Esto significa que, a priori, tendríamos una cuadricula o grid de 4 celdas en total: 
+
+![cuadricula grid](img/conceptos_grid_2.png)
