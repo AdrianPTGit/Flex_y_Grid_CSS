@@ -1,10 +1,27 @@
 .grid{
     display: inline-grid;
-    grid-template-columns: 150px 300px;
-    grid-template-rows: 150px 300px;
+    /*grid-template-columns: 150px 150px;*/
+    grid-template-columns: repeat(2, 150px);
+    /*grid-template-rows: 150px 150px 150px 150px;*/
+    grid-template-rows: repeat(4, 150px);
     background: steelblue;
     padding: 20px;
     height:100%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.grid_2{
+    display: inline-grid;
+    grid-template-columns: 1fr 2fr;/*El valor de 1fr (una fracción) en CSS Grid 
+    depende del espacio disponible en el contenedor. */
+    grid-template-rows: 2fr 2fr;
+    background: steelblue;
+    padding: 20px;
+    height:500px;
+    width: 400px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .item{

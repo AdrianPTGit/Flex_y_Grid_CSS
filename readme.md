@@ -214,3 +214,31 @@ Para activar el modo flex, utilizaremos sobre el elemento contenedor la propieda
   - Esto significa que, a priori, tendríamos una cuadricula o grid de 4 celdas en total: 
 
 ![cuadricula grid](img/conceptos_grid_2.png)
+
+## 4.3. Unidad fracción restante (fr)
+
+> 🔹 `1fr` NO tiene un valor fijo en píxeles.
+
+- El valor de `1fr` **(una fracción)** en CSS Grid depende del espacio disponible en el contenedor. Así que su tamaño cambia dinámicamente según:
+  - el tamaño total del contenedor,
+  - el número de columnas/filas fraccionadas,
+  - el tamaño de otros elementos fijos (en `px`, `%`, etc.),
+  - márgenes, paddings, gaps, etc.
+
+### EJEMPLO:
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 600px;
+}
+```
+
+- `1fr` + `2fr` = `3fr`, que se repartirán el espacio restante del contenedor.
+
+  - En este caso, `1fr` = `200px`, `2fr` = `400px`.
+
+- Pero si el contenedor tuviera `width: 300px`, entonces:
+
+  - `1fr` = `100px`, `2fr` = `200px`.
