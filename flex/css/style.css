@@ -34,3 +34,29 @@
     
 
 }
+
+
+.container_3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    /*Alineación de elementos*/
+    justify-content: center;
+    align-items: start;
+
+    background: steelblue;
+    
+    height: 700px;
+    padding-bottom: 20px;
+
+}
+
+.item-4{
+    background-color: #eb7070;
+    font-size: 2.33em;
+    text-align: center;
+    align-self: flex-end;
+    
+    
+}

@@ -162,3 +162,11 @@ Para activar el modo flex, utilizaremos sobre el elemento contenedor la propieda
 | `space-between` | Distribuye los ítems desde el inicio hasta el final.                        |
 | `space-around`  | Distribuye los ítems dejando el mismo espacio a los lados de cada uno.      |
 | `stretch`       | Estira los ítems para ocupar de forma equitativa todo el espacio.           |
+
+## 3.2. La propiedad align-self
+
+- `align-self` nos permite cambiar el comportamiento de `align-items` y sobreescribirlo con comportamientos específicos para ítems concretos que no queremos que se comporten igual que el resto.
+
+| Propiedad   | Valores                                      | Actúa en eje |
+|-------------|----------------------------------------------|--------------|
+| `align-self`| `auto`  `start`  `end`  `center`  `stretch`  `baseline` | 2️⃣ (eje cruzado) |
