@@ -3,13 +3,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 30px;
-    justify-content: end;
+    /*Alineación de elementos*/
+    justify-content: center;
+    align-content: center;
+
     background: steelblue;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 20px;
+    
+    height: 500px;
 
 }
 
@@ -19,4 +19,18 @@
     width: 300px;
     margin-left: 6px;
     margin-top: 6px;
+}
+
+.container_2 {
+    margin-top: 20px;
+    padding-left: 20px;
+    background: #eb7070;
+    display: flex;
+    width: 100%;
+    height: 1000px;
+    flex-wrap: wrap;
+    
+    align-content: center;
+    
+
 }

@@ -130,3 +130,35 @@ Para activar el modo flex, utilizaremos sobre el elemento contenedor la propieda
 | `space-between` | Distribuye los ítems dejando espacio entre ellos.                           |
 | `space-around`  | Distribuye los ítems dejando espacio alrededor de ellos.                    |
 | `space-evenly`  | Distribuye como `space-around`, pero con un espacio exactamente igual alrededor de ellos. |
+
+
+## 2.2. La propiedad `align-items`
+
+- Se encarga de alinear los ítems en el eje secundario del contenedor.
+- Hay que tener cuidado de no confundir `align-items` con `align-content`, puesto que el segundo actúa sobre cada una de las líneas de un contenedor multilinea (no tiene efecto si no usamos `flex-wrap`)
+
+| Valor    | Descripción                                                                 |
+|----------|------------------------------------------------------------------------------|
+| `start`  | Alinea los ítems al inicio del eje secundario.                              |
+| `end`    | Alinea los ítems al final del eje secundario.                               |
+| `center` | Alinea los ítems al centro del eje secundario.                              |
+| `stretch`| Alinea los ítems estirándolos de modo que cubran desde el inicio hasta el final del contenedor. |
+| `baseline` | Alinea los ítems en el contenedor según la base del contenido de los ítems del contenedor. |
+
+# 3. Alineación multilínea
+
+-  Nos servirá cuando estemos tratando con un contenedor **flex multilinea** creado mediante `flex-wrap`. Los contenedores multilinea son un tipo de contenedor en el que, cuando los ítems no caben en el ancho disponible, el eje principal se divide en múltiples líneas.
+  
+## 3.1. La propiedad `align-content`
+
+- `align-content` servirá para alinear cada una de las líneas del contenedor multilinea. 
+
+
+| Valor           | Descripción                                                                 |
+|-----------------|------------------------------------------------------------------------------|
+| `start`         | Agrupa los ítems al inicio del eje principal.                               |
+| `end`           | Agrupa los ítems al final del eje principal.                                |
+| `center`        | Agrupa los ítems al centro del eje principal.                               |
+| `space-between` | Distribuye los ítems desde el inicio hasta el final.                        |
+| `space-around`  | Distribuye los ítems dejando el mismo espacio a los lados de cada uno.      |
+| `stretch`       | Estira los ítems para ocupar de forma equitativa todo el espacio.           |
