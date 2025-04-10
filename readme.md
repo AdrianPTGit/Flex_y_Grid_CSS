@@ -1,5 +1,7 @@
 # Uso de Grid y Flex en CSS
 
+<img src="img/logo_Flex.jpg" width="300" height="200"/>
+
 ## 1. Flex CSS
 
 - Al inicio en CSS se utilizaba para posicionar elementos en la página web (`static`, `relative`, `absolute`…), elementos en línea o en bloque, o la propiedad `float` para realizar maquetaciones, este sistema complica realizar páginas webs modernas, parta distintos dispositivos móviles, escritorio o resolución de pantalla.
@@ -171,12 +173,14 @@ Para activar el modo flex, utilizaremos sobre el elemento contenedor la propieda
 |-------------|----------------------------------------------|--------------|
 | `align-self`| `auto`  `start`  `end`  `center`  `stretch`  `baseline` | 2️⃣ (eje cruzado) |
 
+
 # 4. Grid CSS
+
+<img src="img/logo_Grid.webp" width="300" height="200"/>
 
 -  `grid` permite crear rápidamente cuadrículas flexibles y potentes de forma prácticamente instantánea con una nueva familia de propiedades CSS.
 
 ## 4.1. Conceptos de Grid
-
 ![Conceptos grid](img/conceptos_grid.png)
 
 - **Contenedor:** El elemento padre contenedor que definirá la cuadrícula o rejilla.
@@ -242,3 +246,47 @@ Para activar el modo flex, utilizaremos sobre el elemento contenedor la propieda
 - Pero si el contenedor tuviera `width: 300px`, entonces:
 
   - `1fr` = `100px`, `2fr` = `200px`.
+
+## 4.3.1. Filas y columnas repetitivas `repeat()`
+
+-  las propiedades `grid-template-columns` y `grid-template-rows` podemos necesitar indicar las mismas cantidades un número alto de veces.
+-  utilizamos la función `repeat()` indicando:
+   -  número de veces que se repiten.
+   -  tamaño. 
+  
+```css
+.grid {
+  display: grid;
+
+  grid-template-columns: 100px repeat(4, 50px) 200px;
+  grid-template-rows: repeat(2, 1fr 2fr);
+
+  /* Equivalente a... */
+  grid-template-columns: 100px 50px 50px 50px 50px 200px;
+  grid-template-rows: 1fr 2fr 1fr 2fr;
+}
+```
+## 4.3.2. Los valores `auto-fill` y `auto-fit`
+
+- si utilizamos `repeat(auto-fill, minmax(300px, 1fr)`, el navegador se va a encargar de que los elementos hijos con el tamaño mínimo quepan en la primera fila, y los que no quepan, se desplacen a las siguientes filas del grid, de modo que se aproveche lo mejor posible el contenedor, y consigamos un efecto similar al que se consigue con media queries, pero de una forma más directa y con menos código.
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  background: grey;
+  gap: 10px;
+}
+
+.item {
+  background: blue;
+  color: #fff;
+  font-size: 2rem;
+}
+```
+## 4.4. Huecos en Grid
+
+| Propiedad  | Descripción                                                  |
+|------------|--------------------------------------------------------------|
+| column-gap | Establece el tamaño de los huecos entre columnas (líneas verticales). |
+| row-gap    | Establece el tamaño de los huecos entre filas (líneas horizontales).  |
